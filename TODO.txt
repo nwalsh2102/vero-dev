@@ -1,0 +1,14 @@
+TODO
+
+HOME:
+1. Replace images of home hero
+2. Make hero button work - DONE
+3. Finish sections
+    a. about
+    b. features
+    c. showcase
+    d. pricing
+    e. contact
+    f. footer
+4. Add link to the Vero Dashboards call out in the about text
+5. Replace about section img with vero logo

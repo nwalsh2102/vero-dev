@@ -19,6 +19,17 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
 
+  // Add this function to be called from outside
+  const showNavbar = () => {
+    setIsVisible(true);
+  };
+
+  // Make the function available globally
+  useEffect(() => {
+    // @ts-ignore
+    window.showNavbar = showNavbar;
+  }, []);
+
   useEffect(() => {
     // Show navbar by default on all pages except home
     if (pathname !== "/") {
@@ -26,14 +37,23 @@ export default function Navbar() {
       return;
     }
 
+    // Add event listener for showing navbar
+    const handleShowNavbar = () => {
+      setIsVisible(true);
+    };
+    window.addEventListener("showNavbar", handleShowNavbar);
+
     // Function to check scroll position
     const checkScrollPosition = () => {
       const heroSection = document.querySelector(".hero-section");
-      if (heroSection) {
+      const navbar = document.querySelector("nav");
+      if (heroSection && navbar) {
         const heroHeight = heroSection.getBoundingClientRect().height;
+        const navbarHeight = navbar.getBoundingClientRect().height;
         const scrollPosition = window.scrollY;
 
-        if (scrollPosition > heroHeight * 0.8) {
+        // Show navbar when scroll position + navbar height equals hero height
+        if (scrollPosition + navbarHeight >= heroHeight) {
           setIsVisible(true);
         } else {
           setIsVisible(false);
@@ -46,7 +66,11 @@ export default function Navbar() {
 
     // Then add scroll listener
     window.addEventListener("scroll", checkScrollPosition);
-    return () => window.removeEventListener("scroll", checkScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", checkScrollPosition);
+      window.removeEventListener("showNavbar", handleShowNavbar);
+    };
   }, [pathname]);
 
   return (

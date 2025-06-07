@@ -9,6 +9,7 @@ import Floating, {
 } from "@/fancy/components/image/parallax-floating";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 const HomeHero = () => {
   const [scope, animate] = useAnimate();
@@ -22,9 +23,20 @@ const HomeHero = () => {
   }, []);
 
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+    const heroSection = document.querySelector(".hero-section");
+    const navbar = document.querySelector("nav");
+    if (heroSection && navbar) {
+      const heroHeight = heroSection.getBoundingClientRect().height;
+      const navbarHeight = navbar.getBoundingClientRect().height;
+      const scrollPosition = heroHeight - navbarHeight + 5;
+
+      // Dispatch event to show navbar
+      window.dispatchEvent(new Event("showNavbar"));
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -40,13 +52,15 @@ const HomeHero = () => {
         transition={{ duration: 0.88, delay: 1.5 }}
       >
         <p className="text-[clamp(2.5rem,8vw,4.5rem)] z-50 text-white font-calendas italic">
-          vero design
+          Vero Design
         </p>
         <button
           onClick={scrollToAbout}
           className="text-[clamp(0.75rem,1.5vw,1rem)] z-50 hover:scale-110 transition-transform bg-accent text-white rounded-none py-[clamp(0.5rem,1vh,0.75rem)] px-[clamp(1.5rem,3vw,2rem)] cursor-pointer"
         >
-          learn more
+          <div className="flex gap-1 items-center">
+            Learn More <ChevronDown size={20} />
+          </div>
         </button>
       </motion.div>
 

@@ -41,21 +41,14 @@ export default function HomePricing() {
     <>
       {/* <NavbarSpacing /> */}
 
-      <div id="pricing" className="w-full p-[clamp(1rem,5vw,3rem)]">
-        <div className="max-w-3xl mx-auto">
+      <div
+        id="pricing"
+        className="w-full h-dvh p-[clamp(1rem,5vw,3rem)] bg-emerald-200"
+      >
+        <div className="h-[70vh] mx-auto max-w-[90vw] space-y-6">
           <Card>
-            <CardContent className="p-6">
-              <div className="text-center space-y-5">
-                <h1 className="text-4xl">Pricing</h1>
-                <p>
-                  If you would like specific pricing, please contact us.
-                  Otherwise take a look at the{" "}
-                  <Link href="/pricing" className="text-accent">
-                    pricing page
-                  </Link>{" "}
-                  to see a more detailed description
-                </p>
-              </div>
+            <CardContent>
+              <h1 className="text-6xl">Pricing - Currently unavailable</h1>
             </CardContent>
           </Card>
         </div>

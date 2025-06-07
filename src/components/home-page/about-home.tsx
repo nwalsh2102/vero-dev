@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import NavbarSpacing from "./navbar-spacing";
+import { Card, CardContent } from "../ui/card";
+import Image from "next/image";
 
 const aboutText =
   "Vero Design brings premium web development and graphic design services directly to your local community, combining the personalized attention of a boutique agency with cutting-edge digital solutions. We specialize in creating sophisticated, minimalist designs that elevate small to mid-sized businesses, while our exclusive Vero Dashboards system sets us apart from the competition. Every client receives their own personalized dashboard—whether for website analytics and management or graphic design asset organization—complete with integrated payment systems that streamline your entire experience. By staying rooted in our local community while leveraging innovative technology, we deliver the premium service and ongoing partnership your business deserves, not just another transaction.";
@@ -19,14 +21,42 @@ export default function HomeAbout() {
 
   return (
     <>
-      <NavbarSpacing classes="bg-black" />
+      <div id="about" className="w-full p-[clamp(1rem,5vw,3rem)] bg-blue-200">
+        <div className="mx-auto max-w-[90vw] space-y-6">
+          <Card className="">
+            <CardContent>
+              <h1 className="text-6xl">About</h1>
+            </CardContent>
+          </Card>
+          <div className="">
+            <Card>
+              <CardContent className="space-y-4 pb-0">
+                <h1 className="text-5xl">About Vero</h1>
+                <div className="grid grid-cols-3">
+                  <div className="col-span-2">
+                    <p className="text-xl">{aboutText}</p>
+                  </div>
+                  <div className="col-span-1 flex items-center justify-center">
+                    <Image
+                      src="/images/medusmo-girl.png"
+                      alt="site"
+                      width={500}
+                      height={400}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
-      <div
-        id="about"
-        className="w-full min-h-[100dvh] grid place-items-center p-[clamp(1rem,5vw,3rem)]"
-      >
-        <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 grid-rows-3">
-          {/* About Section: Text Left, Image Right */}
+{
+  /* <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 grid-rows-3">
           <div className="col-span-full md:col-span-2 md:col-start-1 lg:col-span-3 lg:col-start-1 lg:col-end-4 row-span-1 p-4">
             <h1 className="text-[clamp(3rem,15vw,9rem)] font-calendas">
               About
@@ -42,19 +72,27 @@ export default function HomeAbout() {
                 className="w-[clamp(8rem,20vw,16rem)] mx-auto"
               />
             </div>
-          </div>
+          </div> */
+}
 
-          {/* Mission Section: Centered Text */}
-          {/* <div className="row-span-1 col-span-full">
+{
+  /* Mission Section: Centered Text */
+}
+{
+  /* <div className="row-span-1 col-span-full">
             <h1 className="text-[clamp(3rem,15vw,9rem)] font-calendas text-center">
               Mission
             </h1>
             <Separator className="mb-10 max-w-[80vw] mx-auto" />
             <p className="break-words text-center">{missionText}</p>
-          </div> */}
+          </div> */
+}
 
-          {/* Values Section: Image Left, Text Right */}
-          {/* <div className="col-span-full md:col-span-3 lg:col-span-5 row-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
+{
+  /* Values Section: Image Left, Text Right */
+}
+{
+  /* <div className="col-span-full md:col-span-3 lg:col-span-5 row-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
 
             <div className="col-span-full md:col-span-1 md:col-start-1 lg:col-span-2 lg:col-start-1 row-span-1">
               <div className="grid h-full place-items-center">
@@ -64,30 +102,19 @@ export default function HomeAbout() {
                   className="w-[clamp(8rem,20vw,16rem)] mx-auto"
                 />
               </div>
-            </div> */}
+            </div> */
+}
 
-          {/* Text content on the right (Mobile: full width, stacks) */}
-          {/* <div className="col-span-full md:col-span-2 md:col-start-2 lg:col-span-3 lg:col-start-3 row-span-1 p-4 text-right">
+{
+  /* Text content on the right (Mobile: full width, stacks) */
+}
+{
+  /* <div className="col-span-full md:col-span-2 md:col-start-2 lg:col-span-3 lg:col-start-3 row-span-1 p-4 text-right">
               <h1 className="text-[clamp(3rem,15vw,9rem)] font-calendas">
                 Values
               </h1>
               <Separator className="mb-10 max-w-[80vw] mx-auto" />
               <p className="break-words">{valuesText}</p>
             </div>
-          </div> */}
-
-          {/* Learn More Button */}
-          <div className="col-span-full text-center mt-[clamp(2rem,5vw,4rem)]">
-            <Button
-              size="lg"
-              className="cursor-pointer text-lg"
-              onClick={() => router.push("/about")}
-            >
-              Learn More
-            </Button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+          </div> */
 }

@@ -42,7 +42,7 @@ const HomeHero = () => {
 
   return (
     <div
-      className="flex w-dvw h-dvh justify-center items-center bg-black overflow-hidden hero-section"
+      className="flex w-dvw h-dvh justify-center items-center bg-background overflow-hidden hero-section"
       ref={scope}
     >
       <motion.div
@@ -51,7 +51,7 @@ const HomeHero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.88, delay: 1.5 }}
       >
-        <p className="text-[clamp(2.5rem,8vw,4.5rem)] z-50 text-white font-calendas italic">
+        <p className="text-[clamp(2.5rem,8vw,4.5rem)] z-50 text-foreground font-calendas italic">
           Vero Design
         </p>
         <button

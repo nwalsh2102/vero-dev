@@ -21,7 +21,7 @@ export default function HomeAbout() {
 
   return (
     <>
-      <div id="about" className="w-full p-[clamp(1rem,5vw,3rem)] bg-blue-200">
+      <div id="about" className="w-full p-[clamp(1rem,5vw,3rem)] bg-b-200">
         <div className="mx-auto max-w-[90vw] space-y-6">
           <Card className="">
             <CardContent>
@@ -31,7 +31,7 @@ export default function HomeAbout() {
           <div className="">
             <Card>
               <CardContent className="space-y-4 pb-0">
-                <h1 className="text-5xl">About Vero</h1>
+                <h1 className="text-5xl">Vero</h1>
                 <div className="grid grid-cols-3">
                   <div className="col-span-2">
                     <p className="text-xl">{aboutText}</p>

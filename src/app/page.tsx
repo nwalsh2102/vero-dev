@@ -13,7 +13,7 @@ export default function Page() {
       <HomeAbout />
       <HomeDashboard />
       <HomeFeatured />
-      <HomePricing />
+      {/* <HomePricing /> */}
       <HomeCTA />
       {/* <div className="mb-[100em]" /> */}
     </div>

@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const calendas = localFont({
   src: "../fonts/calendas_plus-webfont.woff",
@@ -28,11 +30,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${calendas.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${calendas.variable} antialiased`}
+      suppressHydrationWarning
+    >
       <body className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <div className="fixed bottom-4 right-4 z-50">
+            <ModeToggle />
+          </div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

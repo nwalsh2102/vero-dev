@@ -8,16 +8,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "../ui/button";
 
 export default function HomeDashboard() {
   return (
     <>
       {/* <NavbarSpacing /> */}
 
-      <div
-        id="dashboards"
-        className="w-full p-[clamp(1rem,5vw,3rem)] bg-emerald-200"
-      >
+      <div id="dashboards" className="w-full p-[clamp(1rem,5vw,3rem)] bg-e-200">
         <div className="min-h-[70vh] mx-auto max-w-[90vw] space-y-6">
           <Card>
             <CardContent className="space-y-3">
@@ -104,13 +102,17 @@ export default function HomeDashboard() {
             <Card>
               <CardContent className="space-y-2">
                 <div className="flex flex-row justify-between items-center select-none">
-                  <h1 className="text-2xl">Real Time Project Analytics</h1>
-                  {/* <ChevronDown /> */}
+                  <div>
+                    <h1 className="text-2xl">Real Time Project Analytics</h1>
+                    <p className="text-md">
+                      Track progress, timelines, and performance metrics
+                      specific to your active projects
+                    </p>
+                  </div>
+                  <div>
+                    <Button className="cursor-pointer">Contact</Button>
+                  </div>
                 </div>
-                <p className="text-md">
-                  Track progress, timelines, and performance metrics specific to
-                  your active projects
-                </p>
               </CardContent>
             </Card>
           </div>

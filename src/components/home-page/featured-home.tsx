@@ -18,7 +18,7 @@ export default function HomeFeatured() {
     <>
       <div
         id="featured-section"
-        className="w-full h-dvh p-[clamp(1rem,5vw,3rem)] bg-purple-200"
+        className="w-full h-dvh p-[clamp(1rem,5vw,3rem)] bg-p-200"
       >
         <div className="h-[70vh] mx-auto max-w-[90vw] space-y-6">
           <Card>
@@ -54,6 +54,11 @@ export default function HomeFeatured() {
                     className="object-cover"
                     fill
                   />
+                </div>
+                <div className="w-full flex items-center justify-center">
+                  <Button className="w-1/5 cursor-pointer text-xl h-[5vh]">
+                    Showcase
+                  </Button>
                 </div>
               </CardContent>
             </Card>

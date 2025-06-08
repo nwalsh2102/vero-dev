@@ -79,7 +79,7 @@ export default function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       } bg-white/80 backdrop-blur-sm`}
     >
-      <div className="flex w-full justify-center p-[clamp(1rem,2vw,1.5rem)] border-black shadow-md h-[clamp(4rem,8vh,6rem)] bg-white/80 backdrop-blur-sm">
+      <div className="flex w-full justify-center p-[clamp(1rem,2vw,1.5rem)] border-foreground shadow-md h-[clamp(4rem,8vh,6rem)] bg-background/80 backdrop-blur-sm">
         <NavigationMenu className="mx-auto">
           <NavigationMenuList className="space-x-[clamp(1rem,3vw,2.5rem)]">
             <NavigationMenuItem>
@@ -93,11 +93,11 @@ export default function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink
-                href="/pricing"
-                data-active={pathname === "/pricing"}
+                href="/dashboards"
+                data-active={pathname === "/dashboards"}
                 className="data-[active=true]:bg-accent! text-[clamp(0.875rem,1.5vw,1.125rem)]"
               >
-                Pricing
+                Dashboards
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>

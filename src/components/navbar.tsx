@@ -22,6 +22,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "./ui/sheet";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -182,7 +183,7 @@ export default function Navbar() {
     >
       <div className="flex w-full justify-between items-center p-[clamp(1rem,2vw,1.5rem)] border-foreground shadow-md h-[clamp(4rem,8vh,6rem)] bg-background/80 backdrop-blur-sm">
         {/* Mobile Menu */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -195,6 +196,17 @@ export default function Navbar() {
               </div>
             </SheetContent>
           </Sheet>
+          <span className="ml-3 text-lg font-semibold">
+            <Image
+              src="/images/vero-v-icon-large.png"
+              alt="Logo"
+              onClick={() => window.location.replace("/")}
+              width={32}
+              height={32}
+              className="object-contain h-8 w-auto max-w-[80px]"
+              priority
+            />
+          </span>
         </div>
 
         {/* Desktop Menu */}

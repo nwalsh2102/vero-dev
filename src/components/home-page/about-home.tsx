@@ -6,6 +6,7 @@ import { Separator } from "../ui/separator";
 import NavbarSpacing from "./navbar-spacing";
 import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 const aboutText =
   "Vero Design brings premium web development and graphic design services directly to your local community, combining the personalized attention of a boutique agency with cutting-edge digital solutions. We specialize in creating sophisticated, minimalist designs that elevate small to mid-sized businesses, while our exclusive Vero Dashboards system sets us apart from the competition. Every client receives their own personalized dashboard—whether for website analytics and management or graphic design asset organization—complete with integrated payment systems that streamline your entire experience. By staying rooted in our local community while leveraging innovative technology, we deliver the premium service and ongoing partnership your business deserves, not just another transaction.";
@@ -25,7 +26,14 @@ export default function HomeAbout() {
         <div className="mx-auto max-w-[90vw] space-y-6">
           <Card className="">
             <CardContent>
-              <h1 className="text-6xl">About</h1>
+              <div className="flex flex-row w-full justify-between items-center">
+                <h1 className="text-6xl">About</h1>
+                <Link href="/about">
+                  <Button size="lg" className="text-lg cursor-pointer">
+                    About
+                  </Button>
+                </Link>
+              </div>
             </CardContent>
           </Card>
           <div className="">

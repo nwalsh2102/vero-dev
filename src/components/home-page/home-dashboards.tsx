@@ -110,7 +110,9 @@ export default function HomeDashboard() {
                     </p>
                   </div>
                   <div>
-                    <Button className="cursor-pointer">Contact</Button>
+                    <a href="/dashboards">
+                      <Button className="cursor-pointer">Dashboards</Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>

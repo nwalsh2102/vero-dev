@@ -10,6 +10,8 @@ import StackingCards, {
 import { useRef, useEffect } from "react";
 import { Button } from "../ui/button";
 import { ExternalLinkIcon } from "lucide-react";
+import Link from "next/link";
+import { buttonVariants } from "../ui/button";
 
 export default function HomeFeatured() {
   const scrollableContainerRef = useRef<HTMLDivElement>(null);
@@ -56,9 +58,14 @@ export default function HomeFeatured() {
                   />
                 </div>
                 <div className="w-full flex items-center justify-center">
-                  <Button className="w-1/5 cursor-pointer text-xl h-[5vh]">
+                  <Link
+                    href="/showcase"
+                    className={buttonVariants({
+                      className: "w-1/6 cursor-pointer text-xl h-[5vh]",
+                    })}
+                  >
                     Showcase
-                  </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

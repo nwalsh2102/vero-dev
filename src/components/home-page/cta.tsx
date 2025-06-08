@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import NavbarSpacing from "./navbar-spacing";
@@ -20,9 +21,11 @@ export default function HomeCTA() {
                 your goals, challenges, and ideas – let's explore what's
                 possible together.
               </p>
-              <Button className="w-[30vw] h-[6vh] text-xl font-bold cursor-pointer">
-                Let's Talk About your Project
-              </Button>
+              <Link href="/contact">
+                <Button className="w-[30vw] h-[6vh] text-xl font-bold cursor-pointer">
+                  Let's Talk About your Project
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

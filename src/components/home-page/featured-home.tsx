@@ -20,21 +20,25 @@ export default function HomeFeatured() {
     <>
       <div
         id="featured-section"
-        className="w-full h-dvh p-[clamp(1rem,5vw,3rem)] bg-p-200"
+        className="w-full min-h-screen p-4 md:p-[clamp(1rem,5vw,3rem)] bg-p-200"
       >
-        <div className="h-[70vh] mx-auto max-w-[90vw] space-y-6">
+        <div className="min-h-[70vh] mx-auto max-w-[90vw] space-y-6">
           <Card>
-            <CardContent>
-              <h1 className="text-6xl">Featured Sites</h1>
+            <CardContent className="p-4 md:p-6">
+              <h1 className="text-4xl md:text-6xl font-bold">Featured Sites</h1>
             </CardContent>
           </Card>
           <div className="h-full">
             <Card className="h-full">
-              <CardContent className="space-y-5 h-full flex flex-col">
-                <div className="flex flex-row justify-between items-center">
+              <CardContent className="space-y-5 h-full flex flex-col p-4 md:p-6">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <div className="space-y-3.5">
-                    <h1 className="text-5xl">Vero QR Code Generator</h1>
-                    <p>QR Code generator built with the vero account system</p>
+                    <h1 className="text-3xl md:text-5xl font-bold">
+                      Vero QR Code Generator
+                    </h1>
+                    <p className="text-base md:text-lg text-muted-foreground">
+                      QR Code generator built with the vero account system
+                    </p>
                   </div>
                   <div>
                     <a
@@ -42,18 +46,22 @@ export default function HomeFeatured() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button className="cursor-pointer text-lg flex" size="lg">
-                        Goto <ExternalLinkIcon />
+                      <Button
+                        className="cursor-pointer text-base md:text-lg flex gap-2 w-full md:w-auto"
+                        size="lg"
+                      >
+                        Goto{" "}
+                        <ExternalLinkIcon className="w-4 h-4 md:w-5 md:h-5" />
                       </Button>
                     </a>
                   </div>
                 </div>
 
-                <div className="w-full flex-1 relative">
+                <div className="w-full flex-1 relative min-h-[300px] md:min-h-[400px]">
                   <Image
                     src="/images/medusmo-girl.png"
                     alt="globe"
-                    className="object-cover"
+                    className="object-cover rounded-lg"
                     fill
                   />
                 </div>
@@ -61,7 +69,8 @@ export default function HomeFeatured() {
                   <Link
                     href="/showcase"
                     className={buttonVariants({
-                      className: "w-1/6 cursor-pointer text-xl h-[5vh]",
+                      className:
+                        "w-full md:w-1/4 cursor-pointer text-base md:text-xl h-[5vh]",
                     })}
                   >
                     Showcase

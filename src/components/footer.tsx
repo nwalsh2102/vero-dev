@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full min-h-[50vh] md:h-[75vh] bg-background/80 mt-auto border-t-2">
+    <footer className="w-full min-h-[50vh] md:h-[75vh] bg-background/80 mt-auto border-t-2 select-none">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-full">
           {/* Brand Section */}
@@ -50,10 +50,10 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start space-y-4">
             <h2 className="text-xl font-semibold">Contact</h2>
             <div className="flex flex-col space-y-2">
-              <p className="text-sm md:text-base text-muted-foreground">
-                Email: contact@verodesign.com
+              <p className="text-sm md:text-base text-muted-foreground select-text">
+                Email: contact@vero-design.com
               </p>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground select-text">
                 Phone: (123) 456-7898
               </p>
               <p className="text-sm md:text-base text-muted-foreground">
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          {/* © {new Date().getFullYear()} Vero Design. All rights reserved. */}
+          © {new Date().getFullYear()} Vero Design. All rights reserved.
         </div>
       </div>
     </footer>

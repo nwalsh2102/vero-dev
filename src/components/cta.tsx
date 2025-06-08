@@ -1,9 +1,16 @@
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import NavbarSpacing from "./navbar-spacing";
+import { Button } from "./ui/button";
+import { Card, CardContent } from "./ui/card";
+import NavbarSpacing from "./home-page/navbar-spacing";
 
-export default function HomeCTA() {
+interface CTAProps {
+  title: string;
+  sub: string;
+  href: string;
+  button: string;
+}
+
+export default function CTA({ title, sub, href, button }: CTAProps) {
   return (
     <>
       {/* <NavbarSpacing /> */}
@@ -15,20 +22,18 @@ export default function HomeCTA() {
         <div className="w-full max-w-[90vw] space-y-6 text-center">
           <Card className="w-full">
             <CardContent className="p-6 md:p-8 space-y-6 md:space-y-8">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
-                Ready to transform your vision?
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                {title}
               </h1>
-              <p className="text-lg md:text-2xl lg:text-3xl text-muted-foreground">
-                Every great project starts with a conversation. Tell us about
-                your goals, challenges, and ideas – let's explore what's
-                possible together.
+              <p className="text-md md:text-1xl lg:text-2xl text-muted-foreground">
+                {sub}
               </p>
-              <Link href="/contact" className="inline-block">
+              <Link href={href} className="inline-block">
                 <Button
                   className="w-full md:w-[30vw] h-[6vh] text-base md:text-xl font-bold cursor-pointer"
-                  size="lg"
+                  size="default"
                 >
-                  Let's Talk About your Project
+                  {button}
                 </Button>
               </Link>
             </CardContent>

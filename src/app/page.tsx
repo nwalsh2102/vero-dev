@@ -1,5 +1,5 @@
 import HomeAbout from "@/components/home-page/about-home";
-import HomeCTA from "@/components/home-page/cta";
+import CTA from "@/components/cta";
 import HomeFeatured from "@/components/home-page/featured-home";
 import HomeHero from "@/components/home-page/hero-home";
 import HomeDashboard from "@/components/home-page/home-dashboards";
@@ -16,7 +16,14 @@ export default function Page() {
       <HomeSeparator />
       <HomeFeatured />
       <HomeSeparator />
-      <HomeCTA />
+      <CTA
+        title="Ready to transform your vision?"
+        sub="Every great project starts with a conversation. Tell us about
+                your goals, challenges, and ideas – let's explore what's
+                possible together."
+        href="/contact"
+        button="Let's Talk About your Project"
+      />
     </div>
   );
 }

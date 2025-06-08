@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 export default function ComingSoon() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4">
+    <div className="w-full flex items-center justify-center p-4 pb-[27vh]">
       <Card className="w-full max-w-md mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl md:text-3xl lg:text-4xl text-center font-bold">
@@ -18,7 +18,7 @@ export default function ComingSoon() {
             </p>
             <Link href="/">
               <Button
-                className="w-full md:w-auto px-8 py-2 text-sm md:text-base hover:bg-accent/90 transition-colors"
+                className="w-full md:w-auto px-8 py-2 text-sm md:text-base hover:bg-accent/90 transition-colors cursor-pointer"
                 size="lg"
               >
                 Return Home

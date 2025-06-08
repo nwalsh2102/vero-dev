@@ -26,7 +26,8 @@ export default function HomeDashboard() {
                 Vero Dashboards
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
-                Your Command Center for Success
+                {/* Your Command Center for Success */}
+                Coming August 2025
               </p>
             </CardContent>
           </Card>

@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Toaster } from "sonner";
 
 const calendas = localFont({
   src: "../fonts/calendas_plus-webfont.woff",
@@ -49,6 +50,7 @@ export default function RootLayout({
             <ModeToggle />
           </div>
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

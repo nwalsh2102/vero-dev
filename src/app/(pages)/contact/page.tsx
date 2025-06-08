@@ -1,4 +1,5 @@
 import ComingSoon from "@/components/coming-soon";
+import ContactForm from "@/components/contact-page/contact-form";
 import PageHeader from "@/components/page-header";
 
 export default function Page() {
@@ -8,7 +9,8 @@ export default function Page() {
         title="Contact"
         desc="Vero Design Contact form for all inquiries"
       />
-      <ComingSoon />
+      <ContactForm />
+      {/* <ComingSoon /> */}
     </>
   );
 }

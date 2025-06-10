@@ -177,7 +177,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-[3vh] left-0 right-0 z-50 transition-all duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } bg-white/80 backdrop-blur-sm`}
     >

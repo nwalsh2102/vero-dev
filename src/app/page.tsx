@@ -4,7 +4,6 @@ import HomeFeatured from "@/components/home-page/featured-home";
 import HomeHero from "@/components/home-page/hero-home";
 import HomeDashboard from "@/components/home-page/home-dashboards";
 import HomeSeparator from "@/components/home-page/home-separator";
-import HomePricing from "@/components/home-page/pricing-home";
 
 export default function Page() {
   return (

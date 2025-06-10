@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Toaster } from "sonner";
+import ImagesDisclaimer from "@/components/images-disclaimer";
 
 const calendas = localFont({
   src: "../fonts/calendas_plus-webfont.woff",
@@ -44,6 +45,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ImagesDisclaimer />
           <Navbar />
           <main className="flex-1">{children}</main>
           <div className="fixed bottom-4 right-4 z-50">

@@ -15,7 +15,7 @@ const calendas = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vero Design",
+  title: "Vero Design - Dev",
   description:
     "Local web design and development built along with Vero Dashboards",
 };

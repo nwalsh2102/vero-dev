@@ -6,7 +6,8 @@ export default function Page() {
     <>
       <PageHeader
         title="Showcase"
-        desc="Showcase of all Vero Design projects"
+        // desc="Showcase of all Vero Design projects"
+        desc="Coming July 2025"
       />
       <ComingSoon />
     </>

@@ -1,6 +1,5 @@
 TODO
 
-HOME:
 1. Replace images of home hero
 2. Make hero button work - DONE
 3. Finish sections
@@ -12,3 +11,4 @@ HOME:
     f. footer
 4. Add link to the Vero Dashboards call out in the about text
 5. Replace about section img with vero logo
+6. Make footer email a link to email

@@ -26,7 +26,10 @@ const contactFormSchema = z
       .min(3, { message: "Name too short." })
       .max(64, { message: "Please enter a shorter name." }),
     email: z.string().email({ message: "Please enter a valid email." }),
-    phone: z.string().min(10, { message: "Please enter a valid number." }),
+    phone: z
+      .string()
+      .min(10, { message: "Please enter a valid number." })
+      .max(11, { message: "Please enter a valid phone number." }),
     company: z.string().min(1, { message: "Please provide your company." }),
     message: z
       .string()

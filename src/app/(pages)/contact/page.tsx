@@ -7,7 +7,8 @@ export default function Page() {
     <>
       <PageHeader
         title="Contact"
-        desc="Vero Design Contact form for all inquiries"
+        // desc="Vero Design Contact form for all inquiries"
+        desc="Coming July 2025"
       />
       <ContactForm />
       {/* <ComingSoon /> */}
